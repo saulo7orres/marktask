@@ -1,0 +1,105 @@
+/* Curso: Análise e Desenvolvimento de Sistemas 
+    Aluno: Saulo Torres de Oliveira Assis
+    Professora: Tarciana Maria de Sena Katter 
+    Projeto: MarkTask - Gestão de Fluxo e Prioridades
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 450px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+}
+
+header, footer { text-align: center; margin-bottom: 25px; }
+header h1 { color: #1e40af; margin-bottom: 5px; }
+header p { color: #64748b; font-size: 14px; margin: 0; }
+
+form { display: flex; gap: 8px; margin-bottom: 20px; }
+input { flex: 1; padding: 12px; border: 2px solid #e2e8f0; border-radius: 8px; outline: none; }
+input:focus { border-color: #3b82f6; }
+
+select { padding: 10px; border: 2px solid #e2e8f0; border-radius: 8px; background: white; }
+
+button[type="submit"] { 
+    background: #2563eb; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+.filtros { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; }
+.filtros button { 
+    cursor: pointer; 
+    border: 1px solid #3b82f6; 
+    background: white; 
+    color: #3b82f6; 
+    border-radius: 20px; 
+    padding: 6px 15px; 
+    font-size: 12px; 
+    transition: 0.3s;
+}
+
+.filtros button.ativo {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+ul { list-style: none; padding: 0; }
+.item-tarefa { 
+    display: flex; 
+    flex-direction: column; 
+    padding: 15px; 
+    border: 1px solid #f1f5f9; 
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.item-conteudo { display: flex; align-items: center; gap: 12px; }
+.item-conteudo span { flex: 1; font-weight: 500; color: #1e293b; }
+
+.concluido { opacity: 0.5; background-color: #f8fafc; }
+.concluido .item-conteudo span, 
+.concluido .item-conteudo .badge { 
+    text-decoration: line-through; 
+}
+
+.data-registro { 
+    font-size: 11px; 
+    color: #000000; 
+    margin-left: 28px; 
+    margin-top: 5px; 
+    font-weight: bold;
+}
+
+.badge { 
+    font-size: 10px; 
+    padding: 3px 8px; 
+    border-radius: 4px; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    color: #fff; 
+}
+.Alta { background: #ef4444; }
+.Média { background: #f59e0b; }
+.Baixa { background: #10b981; }
+
+.btn-remover { color: #94a3b8; background: none; border: none; cursor: pointer; font-size: 16px; }
+.btn-remover:hover { color: #ef4444; }
+
+footer p { color: #1e40af; font-weight: bold; margin-bottom: 5px; }
+#total { font-size: 12px; color: #475569; }
