@@ -1,0 +1,45 @@
+<!--Curso: Análise e Desenvolvimento de Sistemas
+    Aluno: Saulo Torres de Oliveira Assis
+    Professora: Tarciana Maria de Sena Katter 
+    Projeto: MarkTask - Gestão de Fluxo e Prioridades-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>MarkTask - Gestão de Fluxo e Prioridades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MarkTask</h1>
+            <p>Gestão de Fluxo e Prioridades</p>
+        </header>
+
+        <form id="formulario">
+            <input type="text" id="entrada-tarefa" placeholder="O que vamos realizar agora?" required>
+            <select id="prioridade">
+                <option value="Baixa">Baixa</option>
+                <option value="Média" selected>Média</option>
+                <option value="Alta">Alta</option>
+            </select>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <div class="filtros">
+            <button id="btn-todas" class="ativo" onclick="filtrar('todas')">Todas</button>
+            <button id="btn-pendentes" onclick="filtrar('pendentes')">Pendentes</button>
+            <button id="btn-concluidas" onclick="filtrar('concluidas')">Concluídas</button>
+        </div>
+
+        <ul id="lista-tarefas"></ul>
+
+        <footer>
+            <p>Desenvolvido por Saulo Torres</p>
+            <b id="total">Total de registros: 0</b>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
